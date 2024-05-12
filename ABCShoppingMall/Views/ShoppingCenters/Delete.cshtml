@@ -1,0 +1,51 @@
+﻿@model ABCShoppingMall.Models.ShoppingCenter
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+<div class="container" style="margin-left:280px">
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>ShoppingCenter</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ShopName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShopName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Shop_Detail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Shop_Detail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Image)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+    </div>

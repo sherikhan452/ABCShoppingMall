@@ -1,0 +1,53 @@
+﻿@model ABCShoppingMall.Models.FoodCourt
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+<div class="container" style="margin-left:270px">
+    <div>
+        <h4>FoodCourt</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FoodName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FoodName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Food_Detail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Food_Detail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+
+            <dd>
+              
+                <img src="@Url.Content(Model.Image)" width="50" height="50" class="img-rounded" />
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Items)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Items)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

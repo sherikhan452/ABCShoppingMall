@@ -1,0 +1,44 @@
+﻿@model ABCShoppingMall.Models.ShoppingCenter
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+<div class="container" style="margin-left:280px">
+    <div>
+        <h4>ShoppingCenter</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ShopName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShopName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Shop_Detail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Shop_Detail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Image)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>
