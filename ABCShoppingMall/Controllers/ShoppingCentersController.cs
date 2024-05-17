@@ -17,8 +17,9 @@ namespace ABCShoppingMall.Controllers
         private ABCShoppingMallContext db = new ABCShoppingMallContext();
 
         // GET: ShoppingCenters
-        public ActionResult Index()
+        public ActionResult Index() 
         {
+           
             return View(db.ShoppingCenters.ToList());
         }
 
@@ -30,6 +31,7 @@ namespace ABCShoppingMall.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             ShoppingCenter shoppingCenter = db.ShoppingCenters.Find(id);
+            ViewBag.shoppingcenter = shoppingCenter.Id;
             if (shoppingCenter == null)
             {
                 return HttpNotFound();
@@ -55,6 +57,7 @@ namespace ABCShoppingMall.Controllers
             string path = Path.Combine(Server.MapPath("~/Images/"), _filename);
 
             shoppingCenter.Image = "~/Images/" + _filename;
+            ViewBag.Image = shoppingCenter.Image;
             db.ShoppingCenters.Add(shoppingCenter);
 
 

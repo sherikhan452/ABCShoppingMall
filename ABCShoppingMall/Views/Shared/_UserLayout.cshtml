@@ -53,29 +53,21 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#men">Men's</a></li>
-                            <li class="scroll-to-section"><a href="#women">Women's</a></li>
-                            <li class="scroll-to-section"><a href="#kids">Kid's</a></li>
+                            <li class="scroll-to-section">  @Html.ActionLink("Home", "Login", "AdminDashboard")</li>
+                            <li class="scroll-to-section">  @Html.ActionLink("Shop", "Index", "ShoopingProduct")</li>
+                            <li class="scroll-to-section">  @Html.ActionLink("Food Court", "Login", "AdminDashboard")</li>
+                            <li class="scroll-to-section">  @Html.ActionLink("Gallery", "Login", "AdminDashboard")</li>
                             <li class="submenu">
-                                <a href="javascript:;">Pages</a>
+                                <a href="javascript:;">Cinema</a>
                                 <ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="products.html">Products</a></li>
-                                    <li><a href="single-product.html">Single Product</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li> @Html.ActionLink("Multiplex", "Login", "AdminDashboard")</li>
+                                    <li>@Html.ActionLink("Movies", "Login", "AdminDashboard")</li>
+                                    <li>@Html.ActionLink("Tickets", "Login", "AdminDashboard")</li>
+                                    
                                 </ul>
                             </li>
-                            <li class="submenu">
-                                <a href="javascript:;">Features</a>
-                                <ul>
-                                    <li><a href="#">Features Page 1</a></li>
-                                    <li><a href="#">Features Page 2</a></li>
-                                    <li><a href="#">Features Page 3</a></li>
-                                    <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
-                                </ul>
-                            </li>
-                            <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+                           
+                            <li class="scroll-to-section">  @Html.ActionLink("Admin", "Login", "AdminDashboard")</li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -95,14 +87,49 @@
                     <div class="left-content">
                         <div class="thumb">
                             <div class="inner-content">
-                                <h4>We Are Hexashop</h4>
-                                <span>Awesome, clean &amp; creative HTML5 Template</span>
+                                <h4>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+
+                                            @item.ShopName
+                                            
+                                            <!-- other columns -->
+                                        </tr>
+                                    }
+                                </h4>
+                                <span>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+
+                                            @item.Shop_Detail
+
+                                            <!-- other columns -->
+                                        </tr>
+                                    }
+                                </span>
                                 <div class="main-border-button">
                                     <a href="#">Purchase Now!</a>
                                 </div>
                             </div>
-                           <img src="~/Images/"/>
-                            
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    
+                                    <img src="@Url.Action("DisplayImage", "User",new{ id= @item.Id })" alt="Image" />
+                                    <!-- other columns -->
+                                </tr>
+                            }
+                            @*<img src="@Url.Action("DisplayImage", "User",new{ id=1002 })" alt="Image" />*@
+                           
+
+                            @*<img src="@Url.Action("Details", "ShoppingCenters",new{ id=ViewBag.shoppingcenter })" alt="Image" />*@
+
+                            @*<img src="@Url.Action( ViewBag.Image)" alt="Image" />*@
+
                         </div>
                     </div>
                 </div>

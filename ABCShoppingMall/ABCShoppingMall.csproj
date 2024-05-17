@@ -132,8 +132,10 @@
     <Compile Include="Controllers\FoodCourtsController.cs" />
     <Compile Include="Controllers\GalleriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\MultiplexesController.cs" />
+    <Compile Include="Controllers\ShoopingProductController.cs" />
     <Compile Include="Controllers\ShoppingCentersController.cs" />
     <Compile Include="Controllers\TicketsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -416,11 +418,15 @@
     <Content Include="Views\Tickets\Details.cshtml" />
     <Content Include="Views\Tickets\Edit.cshtml" />
     <Content Include="Views\Tickets\Index.cshtml" />
+    <Content Include="Views\Shared\_ProductUser.cshtml" />
+    <Content Include="Views\ShoopingProduct\Index.cshtml" />
+    <Content Include="Views\Shared\_UserProductSide.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
     <Folder Include="Views\Default\" />
+    <Folder Include="Views\Image\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

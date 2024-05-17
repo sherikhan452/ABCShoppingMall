@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -12,114 +11,107 @@ using ABCShoppingMall.Models;
 
 namespace ABCShoppingMall.Controllers
 {
-    public class GalleriesController : Controller
+    public class ShoopingProductController : Controller
     {
         private ABCShoppingMallContext db = new ABCShoppingMallContext();
 
-        // GET: Galleries
+        // GET: ShoopingProduct
         public ActionResult Index()
         {
-            return View(db.Galleries.ToList());
+            return View(db.ShoppingCenters.ToList());
         }
 
-        // GET: Galleries/Details/5
+        // GET: ShoopingProduct/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Gallery gallery = db.Galleries.Find(id);
-            if (gallery == null)
+            ShoppingCenter shoppingCenter = db.ShoppingCenters.Find(id);
+            if (shoppingCenter == null)
             {
                 return HttpNotFound();
             }
-            return View(gallery);
+            return View(shoppingCenter);
         }
 
-        // GET: Galleries/Create
+        // GET: ShoopingProduct/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Galleries/Create
+        // POST: ShoopingProduct/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,GalleryName,Gallery_Detail,Image,File")] Gallery gallery)
+        public ActionResult Create([Bind(Include = "Id,ShopName,Shop_Detail,Image")] ShoppingCenter shoppingCenter)
         {
-            string filename = Path.GetFileName(gallery.File.FileName);
-            string _filename = DateTime.Now.ToString("hhmmssfff") + filename;
-            string path = Path.Combine(Server.MapPath("~/Images/"), _filename);
-
-            gallery.Image = "~/Images/" + _filename;
-            ViewBag.Image = gallery.Image;
-            db.Galleries.Add(gallery);
-
-
-            if (db.SaveChanges() > 0)
+            if (ModelState.IsValid)
             {
-                gallery.File.SaveAs(path);
-            };
+                db.ShoppingCenters.Add(shoppingCenter);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
 
-            return RedirectToAction("Index");
+            return View(shoppingCenter);
         }
-    
-        // GET: Galleries/Edit/5
+
+        // GET: ShoopingProduct/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Gallery gallery = db.Galleries.Find(id);
-            if (gallery == null)
+            ShoppingCenter shoppingCenter = db.ShoppingCenters.Find(id);
+            if (shoppingCenter == null)
             {
                 return HttpNotFound();
             }
-            return View(gallery);
+            return View(shoppingCenter);
         }
 
-        // POST: Galleries/Edit/5
+        // POST: ShoopingProduct/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,GalleryName,Gallery_Detail,Image")] Gallery gallery)
+        public ActionResult Edit([Bind(Include = "Id,ShopName,Shop_Detail,Image")] ShoppingCenter shoppingCenter)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(gallery).State = EntityState.Modified;
+                db.Entry(shoppingCenter).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(gallery);
+            return View(shoppingCenter);
         }
 
-        // GET: Galleries/Delete/5
+        // GET: ShoopingProduct/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Gallery gallery = db.Galleries.Find(id);
-            if (gallery == null)
+            ShoppingCenter shoppingCenter = db.ShoppingCenters.Find(id);
+            if (shoppingCenter == null)
             {
                 return HttpNotFound();
             }
-            return View(gallery);
+            return View(shoppingCenter);
         }
 
-        // POST: Galleries/Delete/5
+        // POST: ShoopingProduct/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Gallery gallery = db.Galleries.Find(id);
-            db.Galleries.Remove(gallery);
+            ShoppingCenter shoppingCenter = db.ShoppingCenters.Find(id);
+            db.ShoppingCenters.Remove(shoppingCenter);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
