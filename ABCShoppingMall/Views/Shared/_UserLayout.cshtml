@@ -53,20 +53,20 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section">  @Html.ActionLink("Home", "Login", "AdminDashboard")</li>
+                            <li class="scroll-to-section">  @Html.ActionLink("Home", "Index", "User")</li>
                             <li class="scroll-to-section">  @Html.ActionLink("Shop", "Index", "ShoopingProduct")</li>
-                            <li class="scroll-to-section">  @Html.ActionLink("Food Court", "Login", "AdminDashboard")</li>
-                            <li class="scroll-to-section">  @Html.ActionLink("Gallery", "Login", "AdminDashboard")</li>
+                            <li class="scroll-to-section">  @Html.ActionLink("Food Court", "Index", "FoodA")</li>
+                            <li class="scroll-to-section">  @Html.ActionLink("Gallery", "Index", "GalleriesUser")</li>
                             <li class="submenu">
                                 <a href="javascript:;">Cinema</a>
                                 <ul>
                                     <li> @Html.ActionLink("Multiplex", "Login", "AdminDashboard")</li>
                                     <li>@Html.ActionLink("Movies", "Login", "AdminDashboard")</li>
                                     <li>@Html.ActionLink("Tickets", "Login", "AdminDashboard")</li>
-                                    
+
                                 </ul>
                             </li>
-                           
+                            <li class="scroll-to-section">  @Html.ActionLink("FeedBack", "Login", "AdminDashboard")</li>
                             <li class="scroll-to-section">  @Html.ActionLink("Admin", "Login", "AdminDashboard")</li>
                         </ul>
                         <a class='menu-trigger'>
@@ -88,47 +88,19 @@
                         <div class="thumb">
                             <div class="inner-content">
                                 <h4>
-                                    @foreach (var item in Model)
-                                    {
-                                        <tr>
-
-                                            @item.ShopName
-                                            
-                                            <!-- other columns -->
-                                        </tr>
-                                    }
+                                   Dior
                                 </h4>
                                 <span>
-                                    @foreach (var item in Model)
-                                    {
-                                        <tr>
-
-                                            @item.Shop_Detail
-
-                                            <!-- other columns -->
-                                        </tr>
-                                    }
+                                  Its Dior Brand Largets Retails in Country
                                 </span>
                                 <div class="main-border-button">
                                     <a href="#">Purchase Now!</a>
                                 </div>
                             </div>
 
-                            @foreach (var item in Model)
-                            {
-                                <tr>
-
-                                    
-                                    <img src="@Url.Action("DisplayImage", "User",new{ id= @item.Id })" alt="Image" />
-                                    <!-- other columns -->
-                                </tr>
-                            }
-                            @*<img src="@Url.Action("DisplayImage", "User",new{ id=1002 })" alt="Image" />*@
-                           
-
-                            @*<img src="@Url.Action("Details", "ShoppingCenters",new{ id=ViewBag.shoppingcenter })" alt="Image" />*@
-
-                            @*<img src="@Url.Action( ViewBag.Image)" alt="Image" />*@
+                            <img src="~/Hexashop/assets/images/baner-right-image-02.jpg">
+                            
+                            
 
                         </div>
                     </div>

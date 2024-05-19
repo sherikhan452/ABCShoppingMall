@@ -1,7 +1,8 @@
-﻿@model IEnumerable<ABCShoppingMall.Models.FoodCourt>
+﻿
 <!DOCTYPE html>
 
 <html>
+
 <head>
 
     <meta charset="utf-8">
@@ -10,7 +11,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Hexashop - Product Listing Page</title>
+    <title>Hexashop - Galleries</title>
 
 
     <!-- Additional CSS Files -->
@@ -31,9 +32,7 @@
 
     -->
 </head>
-
 <body>
-
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
@@ -83,26 +82,60 @@
     </header>
     <!-- ***** Header Area End ***** -->
     <!-- ***** Main Banner Area Start ***** -->
-    <div class="page-heading" id="top">
+    <div class="page-heading about-page-heading" id="top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="inner-content">
-                        <h2>Check Our Shops</h2>
-                        <span>Awesome &amp; Creative HTML CSS layout by TemplateMo</span>
+                        <h2>Gallery</h2>
+                        <span>Awesome, clean &amp; creative HTML5 Template</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- ***** Main Banner Area End ***** -->
-    <!-- ***** Products Area Starts ***** -->
-    <!-- ***** Products Area Ends ***** -->
+    <!-- ***** About Area Starts ***** -->
+    <div class="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-image">
+                        <img src="~/Hexashop/assets/images/about-left-image.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <h4>About Gallery &amp; Our Skills</h4>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore.</span>
+                        <div class="quote">
+                            <i class="fa fa-quote-left"></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod kon tempor incididunt ut labore.</p>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** About Area Ends ***** -->
+    <!-- ***** Our Team Area Ends ***** -->
+    <!-- ***** Services Area Starts ***** -->
+  
+    <!-- ***** Services Area Ends ***** -->
+    <!-- ***** Subscribe Area Starts ***** -->
+  
+    <!-- ***** Subscribe Area Ends ***** -->
+
 
     <div>
         @RenderBody()
     </div>
-
 
     <footer>
         <div class="container">
@@ -110,7 +143,7 @@
                 <div class="col-lg-3">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                            <img src="~/Hexashop/assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
                         </div>
                         <ul>
                             <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
@@ -208,4 +241,3 @@
 </body>
 
 </html>
-

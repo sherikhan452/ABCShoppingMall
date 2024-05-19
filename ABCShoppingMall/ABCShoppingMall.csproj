@@ -132,6 +132,7 @@
     <Compile Include="Controllers\FoodAController.cs" />
     <Compile Include="Controllers\FoodCourtsController.cs" />
     <Compile Include="Controllers\GalleriesController.cs" />
+    <Compile Include="Controllers\GalleriesUserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
@@ -423,6 +424,12 @@
     <Content Include="Views\ShoopingProduct\Index.cshtml" />
     <Content Include="Views\Shared\_UserProductSide.cshtml" />
     <Content Include="Views\FoodA\Index.cshtml" />
+    <Content Include="Views\Shared\_GalleriesLayoutPage.cshtml" />
+    <Content Include="Views\GalleriesUser\Create.cshtml" />
+    <Content Include="Views\GalleriesUser\Delete.cshtml" />
+    <Content Include="Views\GalleriesUser\Details.cshtml" />
+    <Content Include="Views\GalleriesUser\Edit.cshtml" />
+    <Content Include="Views\GalleriesUser\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
