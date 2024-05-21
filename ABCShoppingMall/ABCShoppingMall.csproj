@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminDashboardController.cs" />
     <Compile Include="Controllers\FeedbacksController.cs" />
+    <Compile Include="Controllers\FeedbackUserController.cs" />
     <Compile Include="Controllers\FoodAController.cs" />
     <Compile Include="Controllers\FoodCourtsController.cs" />
     <Compile Include="Controllers\GalleriesController.cs" />
@@ -430,6 +431,11 @@
     <Content Include="Views\GalleriesUser\Details.cshtml" />
     <Content Include="Views\GalleriesUser\Edit.cshtml" />
     <Content Include="Views\GalleriesUser\Index.cshtml" />
+    <Content Include="Views\FeedbackUser\Create.cshtml" />
+    <Content Include="Views\FeedbackUser\Delete.cshtml" />
+    <Content Include="Views\FeedbackUser\Details.cshtml" />
+    <Content Include="Views\FeedbackUser\Edit.cshtml" />
+    <Content Include="Views\FeedbackUser\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
