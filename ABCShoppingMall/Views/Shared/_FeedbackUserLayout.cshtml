@@ -1,5 +1,4 @@
-﻿@model IEnumerable<ABCShoppingMall.Models.FoodCourt>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -10,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Hexashop - Product Listing Page</title>
+    <title>Hexashop - Feedback</title>
 
 
     <!-- Additional CSS Files -->
@@ -83,26 +82,30 @@
     </header>
     <!-- ***** Header Area End ***** -->
     <!-- ***** Main Banner Area Start ***** -->
-    <div class="page-heading" id="top">
+    <div class="page-heading about-page-heading" id="top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="inner-content">
-                        <h2>Check Our Shops</h2>
-                        <span>Awesome &amp; Creative HTML CSS layout by TemplateMo</span>
+                        <h2>FeedBack</h2>
+                        <span>Awesome, clean &amp; creative HTML5 Template</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- ***** Main Banner Area End ***** -->
-    <!-- ***** Products Area Starts ***** -->
-    <!-- ***** Products Area Ends ***** -->
+    <!-- ***** Contact Area Starts ***** -->
+  
+    <!-- ***** Contact Area Ends ***** -->
+    <!-- ***** Subscribe Area Starts ***** -->
+    
+    <!-- ***** Subscribe Area Ends ***** -->
+
 
     <div>
         @RenderBody()
     </div>
-
 
     <footer>
         <div class="container">
@@ -110,7 +113,7 @@
                 <div class="col-lg-3">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                            <img src="~/Hexashop/assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
                         </div>
                         <ul>
                             <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
@@ -189,16 +192,16 @@
 
     <script>
 
-        $(function () {
+        $(function() {
             var selectedClass = "";
-            $("p").click(function () {
-                selectedClass = $(this).attr("data-rel");
-                $("#portfolio").fadeTo(50, 0.1);
-                $("#portfolio div").not("." + selectedClass).fadeOut();
-                setTimeout(function () {
-                    $("." + selectedClass).fadeIn();
-                    $("#portfolio").fadeTo(50, 1);
-                }, 500);
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
 
             });
         });
@@ -208,4 +211,3 @@
 </body>
 
 </html>
-

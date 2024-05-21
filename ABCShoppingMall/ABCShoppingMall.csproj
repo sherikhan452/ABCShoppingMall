@@ -431,6 +431,7 @@
     <Content Include="Views\GalleriesUser\Details.cshtml" />
     <Content Include="Views\GalleriesUser\Edit.cshtml" />
     <Content Include="Views\GalleriesUser\Index.cshtml" />
+    <Content Include="Views\Shared\_FeedbackUserLayout.cshtml" />
     <Content Include="Views\FeedbackUser\Create.cshtml" />
     <Content Include="Views\FeedbackUser\Delete.cshtml" />
     <Content Include="Views\FeedbackUser\Details.cshtml" />
