@@ -106,6 +106,9 @@ namespace ABCShoppingMall.Models
         public int MultiplexId { get; set; }
         public Multiplex Multiplex { get; set; }
         public int SeatsAvailable { get; set; }
+        public string Image { get; set; }
+        [NotMapped]
+        public HttpPostedFileBase File { get; set; }
     }
 
     public class Ticket

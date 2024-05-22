@@ -96,10 +96,8 @@
     </div>
     <!-- ***** Main Banner Area End ***** -->
     <!-- ***** Contact Area Starts ***** -->
-  
     <!-- ***** Contact Area Ends ***** -->
     <!-- ***** Subscribe Area Starts ***** -->
-    
     <!-- ***** Subscribe Area Ends ***** -->
 
 
@@ -192,22 +190,23 @@
 
     <script>
 
-        $(function() {
+        $(function () {
             var selectedClass = "";
-            $("p").click(function(){
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
-                $("#portfolio div").not("."+selectedClass).fadeOut();
-            setTimeout(function() {
-              $("."+selectedClass).fadeIn();
-              $("#portfolio").fadeTo(50, 1);
-            }, 500);
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
 
             });
         });
 
     </script>
-
+    @* Most important script *@
+    @RenderSection("scripts", required: false)
 </body>
 
 </html>

@@ -113,7 +113,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 
                             <li class="treeview">
                                 <a href="index.html">
-                                 
+
                                     <i class="fa fa-dashboard"></i> <span>Admin Panel</span>
                                 </a>
                             </li>
@@ -146,7 +146,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                                 </a>
                                 <ul class="treeview-menu">
                                     <li> @Html.ActionLink("Add Multiplex", "Create", "Multiplexes")</li>
-                                    <li>@Html.ActionLink("View Movies", "Create", "Movies")</li>
+                                    <li> @Html.ActionLink("Add Movies", "Create", "AdminMovies")</li>
+                                    <li>@Html.ActionLink("View Movies", "Index", "AdminMovies")</li>
                                     <li>@Html.ActionLink("Add Ticket", "Create", "Tickets")</li>
 
                                 </ul>
@@ -163,13 +164,15 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                                 </a>
                                 <ul class="treeview-menu">
                                     <li> @Html.ActionLink("Add Feedback", "Create", "Feedbacks")</li>
-                                   
-                                   
+
+
 
                                 </ul>
                             </li>
 
-                          
+
+
+
 
 
 
@@ -606,7 +609,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <!-- Bootstrap Core JavaScript -->
     <script src="~/AdminTmp/js/bootstrap.js"></script>
     <!-- //Bootstrap Core JavaScript -->
-
+    @* Most important script *@
+    @RenderSection("scripts", required: false)
 
 </body>
 </html>
